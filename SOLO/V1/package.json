@@ -1,0 +1,14 @@
+{
+  "name": "micro-center-local-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Micro Center storefront with Supabase accounts and saved carts",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build:pages": "node build-pages.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPUs | Micro Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-category="gpus">
+    <header class="site-header">
+        <h1 id="title"><a href="index.html">Micro Center</a></h1>
+        <details class="account-menu">
+            <summary><img class="account-avatar" src="avatar.svg" alt=""><span class="account-label" id="account-label">Account</span></summary>
+            <div class="account-dropdown">
+                <button id="login-open" type="button">Log in</button>
+                <button id="logout-button" type="button" hidden>Log out</button>
+                <button id="theme-toggle" type="button">Switch to white mode</button>
+                <p id="account-status" role="status" aria-live="polite"></p>
+            </div>
+        </details>
+    </header>
+    <div class="nav-bar">
+        <nav aria-label="Main navigation">
+            <ul class="list">
+                <li class="navbtn"><a href="cpus.html">CPUs</a></li>
+                <li class="navbtn"><a href="gpus.html" aria-current="page">GPUs</a></li>
+                <li class="navbtn"><a href="memory.html">Memory</a></li>
+                <li class="navbtn"><a href="power-supplies.html">Power Supplies</a></li>
+                <li class="navbtn cart-nav-item"><button id="cart-toggle" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">Cart <span id="cart-count" aria-live="polite">0</span></button></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="hero">
+        <h2 class="text">The rising tech giant in computer parts commerce</h2>
+        <div class="logo-container"><img src="channels4_profile.jpg" alt="Micro Center Logo" class="logo"></div>
+    </section>
+    <main class="catalog-page">
+        <p class="eyebrow">Build your next setup</p>
+        <h2 id="catalog-title">Graphics Cards</h2>
+        <div class="catalog-controls" aria-label="Product sorting and filtering">
+            <label>Sort by
+                <select id="product-sort">
+                    <option value="featured">Featured</option>
+                    <option value="price-ascending">Price: low to high</option>
+                    <option value="price-descending">Price: high to low</option>
+                    <option value="name">Name</option>
+                </select>
+            </label>
+            <label>Filter by
+                <select id="product-filter"></select>
+            </label>
+        </div>
+        <p id="catalog-results" class="catalog-results" aria-live="polite"></p>
+        <p class="catalog-note">Sample products and prices for this demo storefront; availability and pricing are not live.</p>
+        <div id="product-grid" class="product-grid" aria-labelledby="catalog-title"></div>
+    </main>
+    <dialog id="login-dialog" class="account-dialog" aria-labelledby="login-title">
+        <form id="login-form" class="account-dialog-content">
+            <div class="account-dialog-header">
+                <h2 id="login-title">Log in</h2>
+                <button class="account-dialog-close" type="button" aria-label="Close login">&times;</button>
+            </div>
+            <p class="account-demo-note">Sign in with your email. Passwords are securely handled by the account provider.</p>
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+            <label id="display-name-label" for="display-name" hidden>Display name (optional)</label>
+            <input id="display-name" name="displayName" type="text" maxlength="40" autocomplete="nickname" placeholder="Display name (optional)" hidden>
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="current-password" required>
+            <p id="login-status" class="account-status" role="status" aria-live="polite"></p>
+            <div class="account-form-actions">
+                <button class="account-submit" type="submit">Log in</button>
+                <button id="account-mode-toggle" class="account-mode-toggle" type="button">Create an account</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="catalog.js" defer></script>
+    <script src="supabase-config.js"></script>
+    <script src="account.js" defer></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>
