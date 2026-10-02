@@ -1,11 +1,3 @@
-# 🛒 Micro Center E-Commerce Clone (Demo)
-
-> ⚠️ **EDUCATIONAL DISCLAIMER & NOTICE**  
-> This project is a **non-commercial, educational clone** of the Micro Center online store. It was created strictly for learning, personal skill development, and demonstrating web development concepts. All logos, brand names, product images, and trademarks belong to their respective owners (Micro Center / Micro Electronics, Inc.).
-
----
-
-## 📌 Project Overview
 
 This repository contains a full-stack web application designed to replicate the core browsing, shopping cart, and user authentication workflows of an e-commerce platform modeled after Micro Center.
 
